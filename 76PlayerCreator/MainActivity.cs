@@ -59,6 +59,13 @@ namespace _76PlayerCreator
                 special = rootobject.special;
             }
 
+            Button button = FindViewById<Button>(Resource.Id.button1);
+            EditText editText1 = FindViewById<EditText>(Resource.Id.editText1);
+
+            button.Click += (o, e) => {
+                editText1.Text += 1;
+            };
+
         }
 
         public override void OnBackPressed()

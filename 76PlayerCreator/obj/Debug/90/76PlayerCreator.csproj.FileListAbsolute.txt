@@ -609,3 +609,4 @@ C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_status.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_perks.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_special.xml
+C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\values\value_special.xml
