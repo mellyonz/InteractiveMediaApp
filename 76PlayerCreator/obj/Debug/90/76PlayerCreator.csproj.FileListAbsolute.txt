@@ -606,3 +606,6 @@ C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_status.xml
+C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_perks.xml
+C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_special.xml

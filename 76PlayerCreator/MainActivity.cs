@@ -20,7 +20,9 @@ namespace _76PlayerCreator
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener, BottomNavigationView.IOnNavigationItemSelectedListener
     {
-        TextView textMessage;
+        TextView textMessage1;
+        TextView textMessage2;
+        TextView textMessage3;
         Special[] special;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -42,7 +44,9 @@ namespace _76PlayerCreator
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
 
-            textMessage = FindViewById<TextView>(Resource.Id.message);
+            textMessage1 = FindViewById<TextView>(Resource.Id.message1);
+            textMessage2 = FindViewById<TextView>(Resource.Id.message2);
+            textMessage3 = FindViewById<TextView>(Resource.Id.message3);
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
 
             navigation.SetOnNavigationItemSelectedListener(this);
@@ -54,7 +58,6 @@ namespace _76PlayerCreator
                 var rootobject = JsonConvert.DeserializeObject<Rootobject>(json);
                 special = rootobject.special;
             }
-            Console.WriteLine(special);
 
         }
 
@@ -125,23 +128,39 @@ namespace _76PlayerCreator
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
 
+            RelativeLayout layout_status = FindViewById<RelativeLayout>(Resource.Id.content_status);
+            RelativeLayout layout_special = FindViewById<RelativeLayout>(Resource.Id.content_special);
+            RelativeLayout layout_perks = FindViewById<RelativeLayout>(Resource.Id.content_perks);
+            //special[0].ToString()
             switch (item.ItemId)
             {
                 case Resource.Id.navigation_home:
+                    layout_perks.Visibility = ViewStates.Gone;
+                    layout_special.Visibility = ViewStates.Gone;
+                    layout_status.Visibility = ViewStates.Visible;
                     using (var writer = new System.IO.StringWriter())
                     {
-                        string json = JsonConvert.SerializeObject(special, Formatting.Indented);
-                        Console.WriteLine(json);
-                        Console.WriteLine(special[1]);
-                        Console.WriteLine(special);
-                        textMessage.Text = special[1].ToString();
+                        textMessage1.Text = "";
                     }
                     return true;
                 case Resource.Id.navigation_dashboard:
-                    textMessage.SetText(Resource.String.title_dashboard);
+                    layout_perks.Visibility = ViewStates.Gone;
+                    layout_special.Visibility = ViewStates.Visible;
+                    layout_status.Visibility = ViewStates.Gone;
+                    using (var writer = new System.IO.StringWriter())
+                    {
+                        textMessage2.Text = special[0].ToString();
+                        textMessage3.Text = special[1].ToString();
+                    }
                     return true;
                 case Resource.Id.navigation_notifications:
-                    textMessage.SetText(Resource.String.title_notifications);
+                    layout_perks.Visibility = ViewStates.Visible;
+                    layout_special.Visibility = ViewStates.Gone;
+                    layout_status.Visibility = ViewStates.Gone;
+                    using (var writer = new System.IO.StringWriter())
+                    {
+                        
+                    }
                     return true;
             }
             return false;
