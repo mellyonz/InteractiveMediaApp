@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Android;
@@ -13,6 +15,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using PerksDefualt;
 using SpecialDefualt;
 
 namespace _76PlayerCreator
@@ -20,10 +23,8 @@ namespace _76PlayerCreator
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener, BottomNavigationView.IOnNavigationItemSelectedListener
     {
-        TextView textMessage1;
-        TextView textMessage2;
-        TextView textMessage3;
         Special[] special;
+        Perks[] perks;
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -33,8 +34,10 @@ namespace _76PlayerCreator
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
+            ViewStub content_main_switch = FindViewById<ViewStub>(Resource.Id.content_main);
+            content_main_switch.LayoutResource = Resource.Layout.app_bar_main;
+            content_main_switch.Inflate
+
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
@@ -44,9 +47,6 @@ namespace _76PlayerCreator
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
 
-            textMessage1 = FindViewById<TextView>(Resource.Id.message1);
-            textMessage2 = FindViewById<TextView>(Resource.Id.message2);
-            textMessage3 = FindViewById<TextView>(Resource.Id.message3);
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
 
             navigation.SetOnNavigationItemSelectedListener(this);
@@ -55,16 +55,69 @@ namespace _76PlayerCreator
             using (StreamReader sr = new StreamReader(assets.Open("special.json")))
             {
                 var json = sr.ReadToEnd();
-                var rootobject = JsonConvert.DeserializeObject<Rootobject>(json);
-                special = rootobject.special;
+                var rootobject_special = JsonConvert.DeserializeObject<SpecialDefualt.Rootobject>(json);
+                special = rootobject_special.special;
             }
 
-            Button button = FindViewById<Button>(Resource.Id.button1);
-            EditText editText1 = FindViewById<EditText>(Resource.Id.editText1);
+            using (StreamReader sr = new StreamReader(assets.Open("perks.json")))
+            {
+                var json = sr.ReadToEnd();
+                var rootobject_perks = JsonConvert.DeserializeObject<PerksDefualt.Rootobject>(json);
+                perks = rootobject_perks.perks;
+            }
 
-            button.Click += (o, e) => {
-                editText1.Text += 1;
-            };
+            using (var writer = new System.IO.StringWriter())
+            {
+                //count_special
+                int c_s = 0;
+                foreach (var c in special)
+                {
+                    var textSimilarArtist = new TextView(this) { Text = special[c_s].Info[0].ToString() };
+                    var button1 = new Button(this) { Text = "Lower" };
+                    var button2 = new Button(this) { Text = "Raise" };
+                    var editText1 = new EditText(this) { Text = special[c_s].Data[0].ToString() };
+                    var layoutParams = FindViewById<LinearLayout>(Resource.Id.add_layout_special);
+                    layoutParams.AddView(textSimilarArtist);
+                    layoutParams.AddView(button1);
+                    layoutParams.AddView(button2);
+                    layoutParams.AddView(editText1);
+
+                    button1.Click += (o, e) => {
+                        if (2 <= Int32.Parse(editText1.Text))
+                        {
+                            editText1.Text = (Int32.Parse(editText1.Text) - 1).ToString();
+                        }
+                    };
+                    button2.Click += (o, e) => {
+                        if (Int32.Parse(editText1.Text) <= 14)
+                        {
+                            editText1.Text = (Int32.Parse(editText1.Text) + 1).ToString();
+                        }
+                    };
+                    c_s += 1;
+                }
+            }
+
+            using (var writer = new System.IO.StringWriter())
+            {
+                //count_special
+                int c_s = 0;
+                foreach (var c in perks)
+                {
+                    var textSimilarArtist = new TextView(this) { Text = perks[c_s].Info[0][0].ToString() };
+                    var button1 = new Button(this) { Text = "Lower" };
+                    var button2 = new Button(this) { Text = "Raise" };
+                    var editText1 = new EditText(this) { Text = perks[c_s].Data[0].ToString() };
+                    var layoutParams = FindViewById<LinearLayout>(Resource.Id.add_layout_perks);
+                    layoutParams.AddView(textSimilarArtist);
+                    layoutParams.AddView(button1);
+                    layoutParams.AddView(button2);
+                    layoutParams.AddView(editText1);
+                    c_s += 1;
+                }
+            }
+
+
 
         }
 
@@ -98,29 +151,18 @@ namespace _76PlayerCreator
             return base.OnOptionsItemSelected(item);
         }
 
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            Android.Views.View view = (Android.Views.View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
+
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
+            ViewStub content_main_switch = FindViewById<ViewStub>(Resource.Id.content_main);
+            var app_bar_main = FindViewById<CoordinatorLayout>(Resource.Layout.app_bar_main);
             int id = item.ItemId;
             if (id == Resource.Id.nav_camera)
             {
-                // Handle the camera action
+                content_main_switch.LayoutResource = Resource.Layout.app_bar_main;
             }
             else if (id == Resource.Id.nav_gallery)
-            {
-
-            }
-            else if (id == Resource.Id.nav_slideshow)
-            {
-
-            }
-            else if (id == Resource.Id.nav_manage)
             {
 
             }
@@ -147,18 +189,13 @@ namespace _76PlayerCreator
                     layout_status.Visibility = ViewStates.Visible;
                     using (var writer = new System.IO.StringWriter())
                     {
-                        textMessage1.Text = "";
+                        
                     }
                     return true;
                 case Resource.Id.navigation_dashboard:
                     layout_perks.Visibility = ViewStates.Gone;
                     layout_special.Visibility = ViewStates.Visible;
                     layout_status.Visibility = ViewStates.Gone;
-                    using (var writer = new System.IO.StringWriter())
-                    {
-                        textMessage2.Text = special[0].ToString();
-                        textMessage3.Text = special[1].ToString();
-                    }
                     return true;
                 case Resource.Id.navigation_notifications:
                     layout_perks.Visibility = ViewStates.Visible;

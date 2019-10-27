@@ -1,470 +1,330 @@
-[
+{
+  "perks": [
     {
-        "level": 1,
-        "maxCardLevel": 2,
-        "names": [
-            "Bandolier"
-        ],
-        "image": [],
-        "descriptions": [
-            "Ballistic weapon ammo weighs 45% less.",
-            "Ballistic weapon ammo weighs 90% less."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            22
-        ],
-        "lbsModifier":  [10,20],
-        "hpModifier":  [10,20],
-        "apModifier":  [10,20]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 2,
+      "names": [
+        "Bandolier"
+      ],
+      "image": "",
+      "descriptions": [
+        "Ballistic weapon ammo weighs 45% less.",
+        "Ballistic weapon ammo weighs 90% less."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Barbarian "
-        ],
-        "image": [],
-        "descriptions": [
-            "Every point of Strength adds +2 Damage Resist (Max 40). (No Power Armor).",
-            "Every point of Strength adds +2 Damage Resist (Max 40). (No Power Armor).",
-            "Every point of Strength adds +2 Damage Resist (Max 40). (No Power Armor)."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            14
-        ],
-        "lbsModifier":  [10,20,30],
-        "hpModifier":  [10,20,30],
-        "apModifier":  [10,20,30]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Barbarian "
+      ],
+      "image": "",
+      "descriptions": [
+        "Every point of Strength adds +2 Damage Resist (Max 40). (No Power Armor).",
+        "Every point of Strength adds +2 Damage Resist (Max 40). (No Power Armor).",
+        "Every point of Strength adds +2 Damage Resist (Max 40). (No Power Armor)."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 2,
-        "names": [
-            "Basher "
-        ],
-        "image": [],
-        "descriptions": [
-            "Gun bashing does +25% damages with a 5% chance to cripple your opponent.",
-            "Gun bashing does +50% damages with a 10% chance to cripple your opponent."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            11
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 2,
+      "names": [
+        "Basher "
+      ],
+      "image": "",
+      "descriptions": [
+        "Gun bashing does +25% damages with a 5% chance to cripple your opponent.",
+        "Gun bashing does +50% damages with a 10% chance to cripple your opponent."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Batteries Included"
-        ],
-        "image": [],
-        "descriptions": [
-            "Energy weapon ammo weighs 30% less.",
-            "Energy weapon ammo weighs 60% less.",
-            "Energy weapon ammo weighs 90% less."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            28
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Batteries Included"
+      ],
+      "image": "",
+      "descriptions": [
+        "Energy weapon ammo weighs 30% less.",
+        "Energy weapon ammo weighs 60% less.",
+        "Energy weapon ammo weighs 90% less."
+      ],
+      "branch": 0,
+      "requiredLevel": [
+        28
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Bear Arms"
-        ],
-        "image": [],
-        "descriptions": [
-            "Heavy guns weigh 30% less.",
-            "Heavy guns weigh 60% less.",
-            "Heavy guns weigh 90% less."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            35
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Bear Arms"
+      ],
+      "image": "",
+      "descriptions": [
+        "Heavy guns weigh 30% less.",
+        "Heavy guns weigh 60% less.",
+        "Heavy guns weigh 90% less."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 1,
-        "names": [
-            "Big Leagues"
-        ],
-        "image": [],
-        "descriptions": [
-            "???"
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            1
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 1,
+      "names": [
+        "Big Leagues"
+      ],
+      "image": "",
+      "descriptions": [
+        "???"
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Blocker "
-        ],
-        "image": [],
-        "descriptions": [
-            "Take 15% less damage from your opponents' melee attacks.",
-            "Take 30% less damage from your opponents' melee attacks.",
-            "Take 45% less damage from your opponents' melee attacks."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            21
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Blocker "
+      ],
+      "image": "",
+      "descriptions": [
+        "Take 15% less damage from your opponents' melee attacks.",
+        "Take 30% less damage from your opponents' melee attacks.",
+        "Take 45% less damage from your opponents' melee attacks."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Bullet Shield"
-        ],
-        "image": [],
-        "descriptions": [
-            "Gain +20 damage resistance while firing a heavy gun.",
-            "Gain +40 damage resistance while firing a heavy gun.",
-            "Gain +60 damage resistance while firing a heavy gun."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            39
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Bullet Shield"
+      ],
+      "image": "",
+      "descriptions": [
+        "Gain +20 damage resistance while firing a heavy gun.",
+        "Gain +40 damage resistance while firing a heavy gun.",
+        "Gain +60 damage resistance while firing a heavy gun."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 2,
-        "names": [
-            "Full Charge"
-        ],
-        "image": [],
-        "descriptions": [
-            "Full Charge Sprinting in Power Armor consumes half as much Fusion Core energy.",
-            "Full Charge Sprinting in Power Armor consumes no extra Fusion Core energy."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            33
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 2,
+      "names": [
+        "Full Charge"
+      ],
+      "image": "",
+      "descriptions": [
+        "Full Charge Sprinting in Power Armor consumes half as much Fusion Core energy.",
+        "Full Charge Sprinting in Power Armor consumes no extra Fusion Core energy."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Gladiator",
-            "Expert Gladiator",
-            "Master Gladiator"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your one-handed melee weapons now do +10% damage.",
-            "Your one-handed melee weapons now do +15% damage.",
-            "Your one-handed melee weapons now do +20% damage."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            2,
-            20,
-            20
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Gladiator",
+        "Expert Gladiator",
+        "Master Gladiator"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your one-handed melee weapons now do +10% damage.",
+        "Your one-handed melee weapons now do +15% damage.",
+        "Your one-handed melee weapons now do +20% damage."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Heavy Gunner",
-            "Expert Heavy Gunner",
-            "Master Heavy Gunner"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your non-explosive heavy guns now do +10% damage.",
-            "Your non-explosive heavy guns now do +15% damage.",
-            "Your non-explosive heavy guns now do +20% damage."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            30,
-            40,
-            40
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Heavy Gunner",
+        "Expert Heavy Gunner",
+        "Master Heavy Gunner"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your non-explosive heavy guns now do +10% damage.",
+        "Your non-explosive heavy guns now do +15% damage.",
+        "Your non-explosive heavy guns now do +20% damage."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Incisor"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your melee weapons ignore 25% of your target's armor.",
-            "Your melee weapons ignore 50% of your target's armor.",
-            "Your melee weapons ignore 75% of your target's armor."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            34
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Incisor"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your melee weapons ignore 25% of your target's armor.",
+        "Your melee weapons ignore 50% of your target's armor.",
+        "Your melee weapons ignore 75% of your target's armor."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Iron Fist"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your punching attacks do +10% damage.",
-            "Your punching attacks do +15% damage.",
-            "Your punching attacks do +20% damage."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            5
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Iron Fist"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your punching attacks do +10% damage.",
+        "Your punching attacks do +15% damage.",
+        "Your punching attacks do +20% damage."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Lock and Load"
-        ],
-        "image": [],
-        "descriptions": [
-            "Heavy guns reload 10% faster.",
-            "Heavy guns reload 20% faster.",
-            "Heavy guns reload 30% faster."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            37
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Lock and Load"
+      ],
+      "image": "",
+      "descriptions": [
+        "Heavy guns reload 10% faster.",
+        "Heavy guns reload 20% faster.",
+        "Heavy guns reload 30% faster."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Martial Artist"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your melee weapons weigh 20% less, and you can swing them 10% faster.",
-            "Your melee weapons weigh 40% less, and you can swing them 20% faster.",
-            "Your melee weapons weigh 60% less, and you can swing them 30% faster."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            16
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Martial Artist"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your melee weapons weigh 20% less, and you can swing them 10% faster.",
+        "Your melee weapons weigh 40% less, and you can swing them 20% faster.",
+        "Your melee weapons weigh 60% less, and you can swing them 30% faster."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Ordnance Express"
-        ],
-        "image": [],
-        "descriptions": [
-            "Explosives weigh 30% less.",
-            "Explosives weigh 60% less.",
-            "Explosives weigh 90% less."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            31
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Ordnance Express"
+      ],
+      "image": "",
+      "descriptions": [
+        "Explosives weigh 30% less.",
+        "Explosives weigh 60% less.",
+        "Explosives weigh 90% less."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Pack Rat"
-        ],
-        "image": [],
-        "descriptions": [
-            "The weight of all junk items is reduced by 25%.",
-            "The weight of all junk items is reduced by 50%.",
-            "The weight of all junk items is reduced by 75%."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            7
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Pack Rat"
+      ],
+      "image": "",
+      "descriptions": [
+        "The weight of all junk items is reduced by 25%.",
+        "The weight of all junk items is reduced by 50%.",
+        "The weight of all junk items is reduced by 75%."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Scattershot"
-        ],
-        "image": [],
-        "descriptions": [
-            "Shotguns now weigh 30% less and you reload them 10% faster.",
-            "Shotguns now weigh 60% less and you reload them 20% faster.",
-            "Shotguns now weigh 90% less and you reload them 30% faster"
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            18
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Scattershot"
+      ],
+      "image": "",
+      "descriptions": [
+        "Shotguns now weigh 30% less and you reload them 10% faster.",
+        "Shotguns now weigh 60% less and you reload them 20% faster.",
+        "Shotguns now weigh 90% less and you reload them 30% faster"
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Shotgunner",
-            "Expert Shotgunner",
-            "Master Shotgunner"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your shotguns now do +10% damage.",
-            "Your shotguns now do +15% damage.",
-            "Your shotguns now do +20% damage."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            10,
-            23,
-            23
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Shotgunner",
+        "Expert Shotgunner",
+        "Master Shotgunner"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your shotguns now do +10% damage.",
+        "Your shotguns now do +15% damage.",
+        "Your shotguns now do +20% damage."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Expert Slugger"
-        ],
-        "image": [],
-        "descriptions": [
-            "Your two-handed melee weapons now do +10% damage.",
-            "Your two-handed melee weapons now do +15% damage.",
-            "Your two-handed melee weapons now do +20% damage."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            6,
-            24,
-            24
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Expert Slugger"
+      ],
+      "image": "",
+      "descriptions": [
+        "Your two-handed melee weapons now do +10% damage.",
+        "Your two-handed melee weapons now do +15% damage.",
+        "Your two-handed melee weapons now do +20% damage."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 4,
-        "names": [
-            "Strong Back"
-        ],
-        "image": [],
-        "descriptions": [
-            "Gain +10 to carry weight.",
-            "Gain +20 to carry weight.",
-            "Gain +30 to carry weight."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            26
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 4,
+      "names": [
+        "Strong Back"
+      ],
+      "image": "",
+      "descriptions": [
+        "Gain +10 to carry weight.",
+        "Gain +20 to carry weight.",
+        "Gain +30 to carry weight."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 2,
-        "names": [
-            "Sturdy Frame"
-        ],
-        "image": [],
-        "descriptions": [
-            "Armor weighs 25% less than normal.",
-            "Armor weighs 50% less than normal."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            13
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 2,
+      "names": [
+        "Sturdy Frame"
+      ],
+      "image": "",
+      "descriptions": [
+        "Armor weighs 25% less than normal.",
+        "Armor weighs 50% less than normal."
+      ]
     },
     {
-        "level": 1,
-        "maxCardLevel": 3,
-        "names": [
-            "Travelling Pharmacy"
-        ],
-        "image": [],
-        "descriptions": [
-            "Weight of all Chems (including Stimpaks) are reduced by 30%.",
-            "Weight of all Chems (including Stimpaks) are reduced by 60%.",
-            "Weight of all Chems (including Stimpaks) are reduced by 90%."
-        ],
-        "branch": 0,
-        "requiredLevel": [
-            3
-        ],
-        "lbsModifier":  [0,0,0],
-        "hpModifier":  [0,0,0],
-        "apModifier":  [0,0,0]
+      "level": 1,
+      "assignedLevel": 0,
+      "maxCardLevel": 3,
+      "names": [
+        "Travelling Pharmacy"
+      ],
+      "image": "",
+      "descriptions": [
+        "Weight of all Chems (including Stimpaks) are reduced by 30%.",
+        "Weight of all Chems (including Stimpaks) are reduced by 60%.",
+        "Weight of all Chems (including Stimpaks) are reduced by 90%."
+      ]
     }
-]
+  ]
+}
