@@ -342,10 +342,8 @@ C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable\side_nav_bar.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable-v21\ic_menu_camera.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable-v21\ic_menu_gallery.xml
-C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable-v21\ic_menu_manage.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable-v21\ic_menu_send.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable-v21\ic_menu_share.xml
-C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\drawable-v21\ic_menu_slideshow.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\menu\activity_main_drawer.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\menu\menu_main.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
@@ -610,3 +608,4 @@ C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_perks.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_special.xml
 C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\android\assets\Mono.Android.pdb
+C:\Users\Kieran\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Debug\90\res\layout\content_tutorial.xml

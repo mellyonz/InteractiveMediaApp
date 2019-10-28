@@ -97,10 +97,8 @@
     <AndroidResource Include="Resources\drawable\side_nav_bar.xml" />
     <AndroidResource Include="Resources\drawable-v21\ic_menu_camera.xml" />
     <AndroidResource Include="Resources\drawable-v21\ic_menu_gallery.xml" />
-    <AndroidResource Include="Resources\drawable-v21\ic_menu_manage.xml" />
     <AndroidResource Include="Resources\drawable-v21\ic_menu_send.xml" />
     <AndroidResource Include="Resources\drawable-v21\ic_menu_share.xml" />
-    <AndroidResource Include="Resources\drawable-v21\ic_menu_slideshow.xml" />
     <AndroidResource Include="Resources\menu\activity_main_drawer.xml" />
     <AndroidResource Include="Resources\menu\menu_main.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
@@ -156,6 +154,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\content_special.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\content_tutorial.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
