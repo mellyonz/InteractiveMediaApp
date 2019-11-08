@@ -27,6 +27,7 @@ namespace _76PlayerCreator
         Special[] special;
         Perks[] perks;
         VideoView videoView;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -45,7 +46,6 @@ namespace _76PlayerCreator
             navigationView.SetNavigationItemSelectedListener(this);
 
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-
             navigation.SetOnNavigationItemSelectedListener(this);
 
             AssetManager assets = this.Assets;
@@ -69,24 +69,51 @@ namespace _76PlayerCreator
                 int c_s = 0;
                 foreach (var c in special)
                 {
-                    var textSimilarArtist = new TextView(this) { Text = special[c_s].Info[0].ToString() };
-                    CardView card = new CardView(this);
-                    LinearLayout layout_card = new LinearLayout(this);
-                    layout_card.Orientation = Android.Widget.Orientation.Vertical;
-                    LinearLayout layout_buttons = new LinearLayout(this);
-                    layout_buttons.Orientation = Android.Widget.Orientation.Horizontal;
-                    var button1 = new Button(this) { Text = "Lower" };
-                    var button2 = new Button(this) { Text = "Raise" };
-                    var editText1 = new EditText(this) { Text = special[c_s].Data[0].ToString() };
-                    var layoutParams = FindViewById<LinearLayout>(Resource.Id.add_layout_special);
+                    var layout_main = FindViewById<LinearLayout>(Resource.Id.add_layout_special);
 
-                    layout_card.AddView(textSimilarArtist);
+                    CardView.LayoutParams layout_card_par = new CardView.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
+                    layout_card_par.SetMargins(30, 30, 30, 30);
+                    LinearLayout layout_card = new LinearLayout(this)
+                    {
+                        Orientation = Android.Widget.Orientation.Vertical,
+                        LayoutParameters = layout_card_par
+                    };
+                    CardView.LayoutParams card_par = new CardView.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
+                    card_par.SetMargins(30, 30, 30, 30);
+                    CardView card = new CardView(this)
+                    {
+                        LayoutParameters = card_par
+                    };
+
+                    var special_name = new TextView(this) { Text = special[c_s].Info[0].ToString() };
+
+                    var special_description = new TextView(this) { Text = special[c_s].ToString() };
+
+                    LinearLayout layout_buttons = new LinearLayout(this)
+                    {
+                        Orientation = Android.Widget.Orientation.Horizontal
+                    };
+
+                    var button1 = new Button(this)
+                    { 
+                        Text = "Lower" 
+                    };
+
+                    var button2 = new Button(this)
+                    { 
+                        Text = "Raise" 
+                    };
+
+                    var editText1 = new EditText(this) { Text = special[c_s].Data[0].ToString() };
+
+                    layout_card.AddView(special_name);
+                    layout_card.AddView(special_description);
                     layout_buttons.AddView(button1);
+                    layout_buttons.AddView(editText1);
                     layout_buttons.AddView(button2);
                     layout_card.AddView(layout_buttons);
-                    layout_card.AddView(editText1);
                     card.AddView(layout_card);
-                    layoutParams.AddView(card);
+                    layout_main.AddView(card);
 
                     button1.Click += (o, e) => {
                         if (2 <= Int32.Parse(editText1.Text))
@@ -110,24 +137,63 @@ namespace _76PlayerCreator
                 int c_p = 0;
                 foreach (var c in perks)
                 {
-                    var textSimilarArtist = new TextView(this) { Text = perks[c_p].Info[0][0].ToString() };
-                    CardView card = new CardView(this);
-                    LinearLayout layout_card = new LinearLayout(this);
-                    layout_card.Orientation = Android.Widget.Orientation.Vertical;
-                    LinearLayout layout_buttons = new LinearLayout(this);
-                    layout_buttons.Orientation = Android.Widget.Orientation.Horizontal;
-                    var button1 = new Button(this) { Text = "Lower"};
-                    var button2 = new Button(this) { Text = "Raise" };
-                    var editText1 = new EditText(this) { Text = perks[c_p].Data[0].ToString() };
+                    
+                    var layout_main = FindViewById<LinearLayout>(Resource.Id.add_layout_special);
+
+                    CardView.LayoutParams layout_card_par = new CardView.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
+                    layout_card_par.SetMargins(30, 30, 0, 30);
+                    LinearLayout layout_card = new LinearLayout(this)
+                    {
+                        Orientation = Android.Widget.Orientation.Vertical,
+                        LayoutParameters = layout_card_par
+                    };
+                    CardView.LayoutParams card_par = new CardView.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
+                    card_par.SetMargins(50, 0, 60, 60);
+                    CardView card = new CardView(this)
+                    {
+                        LayoutParameters = card_par
+                    };
+                    var perk_name = new TextView(this) { Text = perks[c_p].Info[0][0].ToString() };
+                    var perk_description = new TextView(this) { Text = perks[c_p].Info[1][0].ToString() };
+
+                    LinearLayout layout_buttons = new LinearLayout(this)
+                    {
+                        Orientation = Android.Widget.Orientation.Horizontal
+                    };
+
+                    var button1 = new Button(this)
+                    {
+                        Text = "Lower"
+                    };
+
+                    var button2 = new Button(this)
+                    {
+                        Text = "Raise"
+                    };
+                    var editText1 = new EditText(this) { Text = perks[c_p].Data[1].ToString() };
                     var layoutParams = FindViewById<LinearLayout>(Resource.Id.add_layout_perks);
 
-                    layout_card.AddView(textSimilarArtist);
+                    layout_card.AddView(perk_name);
+                    layout_card.AddView(perk_description);
                     layout_buttons.AddView(button1);
+                    layout_buttons.AddView(editText1);
                     layout_buttons.AddView(button2);
                     layout_card.AddView(layout_buttons);
-                    layout_card.AddView(editText1);
                     card.AddView(layout_card);
                     layoutParams.AddView(card);
+
+                    button1.Click += (o, e) => {
+                        if (1 <= Int32.Parse(editText1.Text))
+                        {
+                            editText1.Text = (Int32.Parse(editText1.Text) - 1).ToString();
+                        }
+                    };
+                    button2.Click += (o, e) => {
+                        if (Int32.Parse(editText1.Text) <= perks[c_p].Data[2])
+                        {
+                            editText1.Text = (Int32.Parse(editText1.Text) + 1).ToString();
+                        }
+                    };
 
                     c_p += 1;
                 }

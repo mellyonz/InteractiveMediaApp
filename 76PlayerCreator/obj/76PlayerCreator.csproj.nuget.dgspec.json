@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kieran\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj": {}
+    "C:\\Users\\sidde\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kieran\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj": {
+    "C:\\Users\\sidde\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kieran\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj",
+        "projectUniqueName": "C:\\Users\\sidde\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj",
         "projectName": "76PlayerCreator",
-        "projectPath": "C:\\Users\\Kieran\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj",
-        "packagesPath": "C:\\Users\\Kieran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kieran\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\obj\\",
+        "projectPath": "C:\\Users\\sidde\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\76PlayerCreator.csproj",
+        "packagesPath": "C:\\Users\\sidde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sidde\\Dropbox\\76PlayerCreator\\InteractiveMediaApp\\76PlayerCreator\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kieran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sidde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -38,6 +38,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "EO.Pdf": {
+              "target": "Package",
+              "version": "[19.2.91, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.2, )"
