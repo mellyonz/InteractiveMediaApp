@@ -135,6 +135,7 @@ namespace _76PlayerCreator
             {
                 //count_perks
                 int c_p = 0;
+                int c_nd = 0;
                 foreach (var c in perks)
                 {
                     
@@ -153,8 +154,8 @@ namespace _76PlayerCreator
                     {
                         LayoutParameters = card_par
                     };
-                    var perk_name = new TextView(this) { Text = perks[c_p].Info[0][0].ToString() };
-                    var perk_description = new TextView(this) { Text = perks[c_p].Info[1][0].ToString() };
+                    var perk_name = new TextView(this) { Text = perks[c_p].Info[0][c_nd].ToString() };
+                    var perk_description = new TextView(this) { Text = perks[c_p].Info[1][c_nd].ToString() };
 
                     LinearLayout layout_buttons = new LinearLayout(this)
                     {
@@ -181,17 +182,27 @@ namespace _76PlayerCreator
                     layout_card.AddView(layout_buttons);
                     card.AddView(layout_card);
                     layoutParams.AddView(card);
+                    var maxCardLevel = perks[c_p].Data[2];
+                    var description = "";
+                    foreach (int desc in perks[c_p].Info[1].ToString())
+                        description += desc;
+
 
                     button1.Click += (o, e) => {
                         if (1 <= Int32.Parse(editText1.Text))
                         {
                             editText1.Text = (Int32.Parse(editText1.Text) - 1).ToString();
+                            var store = c_p;
+                            c_nd -= 1;
+                            perk_description.Text = description[c_nd].ToString();
                         }
                     };
                     button2.Click += (o, e) => {
-                        if (Int32.Parse(editText1.Text) <= perks[c_p].Data[2])
+                        if (Int32.Parse(editText1.Text) <= maxCardLevel)
                         {
                             editText1.Text = (Int32.Parse(editText1.Text) + 1).ToString();
+                            c_nd += 1;
+                            perk_description.Text = description[c_nd].ToString();
                         }
                     };
 

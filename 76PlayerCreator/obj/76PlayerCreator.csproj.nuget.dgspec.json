@@ -38,10 +38,6 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
-            "EO.Pdf": {
-              "target": "Package",
-              "version": "[19.2.91, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.2, )"
