@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top">
+
+            <Button
+                android:text="Play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200px"
+                android:minHeight="100px"
+                android:id="@+id/play_button"/>
+            <Button
+                android:text="Pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200px"
+                android:minHeight="100px"
+                android:id="@+id/pause_button" />
+            <Button
+                android:text="Mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200px"
+                android:minHeight="100px"
+                android:id="@+id/mute_button" />
+
+        </LinearLayout>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek_bar"
+            android:max="10"
+            android:progress="5" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

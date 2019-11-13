@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using Android;
 using Android.App;
+using Android.Content.PM;
 using Android.Content.Res;
+using Android.Media;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -21,16 +20,15 @@ using SpecialDefualt;
 
 namespace _76PlayerCreator
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener, BottomNavigationView.IOnNavigationItemSelectedListener
     {
-        Special[] special;
-        Perks[] perks;
-        VideoView videoView;
+        private Special[] special;
+        private Perks[] perks;
+        private VideoView videoView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
@@ -52,6 +50,7 @@ namespace _76PlayerCreator
             using (StreamReader sr = new StreamReader(assets.Open("special.json")))
             {
                 var json = sr.ReadToEnd();
+                
                 var rootobject_special = JsonConvert.DeserializeObject<SpecialDefualt.Rootobject>(json);
                 special = rootobject_special.special;
             }
@@ -89,20 +88,27 @@ namespace _76PlayerCreator
 
                     var special_description = new TextView(this) { Text = special[c_s].ToString() };
 
+                    LinearLayout.LayoutParams par_layout_buttons = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
+                    {
+                        Gravity = GravityFlags.Right
+                    };
                     LinearLayout layout_buttons = new LinearLayout(this)
                     {
-                        Orientation = Android.Widget.Orientation.Horizontal
+                        Orientation = Android.Widget.Orientation.Horizontal,
+                        LayoutParameters = par_layout_buttons
                     };
 
-                    var button1 = new Button(this)
-                    { 
-                        Text = "Lower" 
+                    var button1 = new ImageButton(this)
+                    {
+                        ContentDescription = special[c_s].Data[0].ToString()
                     };
+                    button1.SetImageResource(Resource.Drawable.arrow_left);
 
-                    var button2 = new Button(this)
-                    { 
-                        Text = "Raise" 
+                    var button2 = new ImageButton(this)
+                    {
+                        ContentDescription = special[c_s].Data[0].ToString()
                     };
+                    button2.SetImageResource(Resource.Drawable.arrow_right);
 
                     var editText1 = new EditText(this) { Text = special[c_s].Data[0].ToString() };
 
@@ -115,16 +121,22 @@ namespace _76PlayerCreator
                     card.AddView(layout_card);
                     layout_main.AddView(card);
 
+                    
+
                     button1.Click += (o, e) => {
+                        var current = Int32.Parse(button1.ContentDescription[0].ToString());
                         if (2 <= Int32.Parse(editText1.Text))
                         {
                             editText1.Text = (Int32.Parse(editText1.Text) - 1).ToString();
+                            special[current].Data[0] -= 1;
                         }
                     };
                     button2.Click += (o, e) => {
+                        var current = Int32.Parse(button2.ContentDescription[0].ToString());
                         if (Int32.Parse(editText1.Text) <= 14)
                         {
                             editText1.Text = (Int32.Parse(editText1.Text) + 1).ToString();
+                            special[current].Data[0] += 1;
                         }
                     };
                     c_s += 1;
@@ -135,14 +147,14 @@ namespace _76PlayerCreator
             {
                 //count_perks
                 int c_p = 0;
-                int c_nd = 0;
+
                 foreach (var c in perks)
                 {
-                    
+
                     var layout_main = FindViewById<LinearLayout>(Resource.Id.add_layout_special);
 
                     CardView.LayoutParams layout_card_par = new CardView.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
-                    layout_card_par.SetMargins(30, 30, 0, 30);
+                    layout_card_par.SetMargins(30, 30, 30, 30);
                     LinearLayout layout_card = new LinearLayout(this)
                     {
                         Orientation = Android.Widget.Orientation.Vertical,
@@ -154,23 +166,32 @@ namespace _76PlayerCreator
                     {
                         LayoutParameters = card_par
                     };
-                    var perk_name = new TextView(this) { Text = perks[c_p].Info[0][c_nd].ToString() };
-                    var perk_description = new TextView(this) { Text = perks[c_p].Info[1][c_nd].ToString() };
 
+                    var perk_name = new TextView(this) { Text = perks[c_p].Info[0][0].ToString() };
+                    var perk_description = new TextView(this) { Text = perks[c_p].Info[1][0].ToString() };
+
+                    LinearLayout.LayoutParams par_layout_buttons = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
+                    {
+                        Gravity = GravityFlags.Right
+                    };
                     LinearLayout layout_buttons = new LinearLayout(this)
                     {
-                        Orientation = Android.Widget.Orientation.Horizontal
+                        Orientation = Android.Widget.Orientation.Horizontal,
+                        LayoutParameters = par_layout_buttons
                     };
 
-                    var button1 = new Button(this)
+                    var button1 = new ImageButton(this)
                     {
-                        Text = "Lower"
+                        ContentDescription = perks[c_p].Data[1].ToString() + c_p.ToString()
                     };
+                    button1.SetImageResource(Resource.Drawable.arrow_left);
 
-                    var button2 = new Button(this)
+                    var button2 = new ImageButton(this)
                     {
-                        Text = "Raise"
+                        ContentDescription = perks[c_p].Data[1].ToString() + c_p.ToString()
                     };
+                    button2.SetImageResource(Resource.Drawable.arrow_right);
+
                     var editText1 = new EditText(this) { Text = perks[c_p].Data[1].ToString() };
                     var layoutParams = FindViewById<LinearLayout>(Resource.Id.add_layout_perks);
 
@@ -189,20 +210,45 @@ namespace _76PlayerCreator
 
 
                     button1.Click += (o, e) => {
+                        //count name and description
+                        var count = Int32.Parse(button1.ContentDescription[0].ToString());
+                        var current = Int32.Parse(button1.ContentDescription[1].ToString());
                         if (1 <= Int32.Parse(editText1.Text))
                         {
                             editText1.Text = (Int32.Parse(editText1.Text) - 1).ToString();
-                            var store = c_p;
-                            c_nd -= 1;
-                            perk_description.Text = description[c_nd].ToString();
+                            count -= 1;
+                            try
+                            {
+                                perk_name.Text = perks[current].Info[0][count].ToString();
+                                perk_description.Text = perks[current].Info[1][count].ToString();
+                            }
+                            catch
+                            {
+                                perk_name.Text = perks[current].Info[0][0].ToString();
+                                perk_description.Text = perks[current].Info[1][count].ToString();
+                            }
+                            button1.ContentDescription = count.ToString() + current.ToString();
                         }
                     };
                     button2.Click += (o, e) => {
-                        if (Int32.Parse(editText1.Text) <= maxCardLevel)
+                        //count name and description
+                        var count = Int32.Parse(button1.ContentDescription[0].ToString());
+                        var current = Int32.Parse(button1.ContentDescription[1].ToString());
+                        if (Int32.Parse(editText1.Text) <= maxCardLevel - 1)
                         {
                             editText1.Text = (Int32.Parse(editText1.Text) + 1).ToString();
-                            c_nd += 1;
-                            perk_description.Text = description[c_nd].ToString();
+                            try
+                            {
+                                perk_name.Text = perks[current].Info[0][count].ToString();
+                                perk_description.Text = perks[current].Info[1][count].ToString();
+                            }
+                            catch
+                            {
+                                perk_name.Text = perks[current].Info[0][0].ToString();
+                                perk_description.Text = perks[current].Info[1][count].ToString();
+                            }
+                            count += 1;
+                            button1.ContentDescription = count.ToString() + current.ToString();
                         }
                     };
 
@@ -214,11 +260,43 @@ namespace _76PlayerCreator
             var uri = Android.Net.Uri.Parse("https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4");
             MediaController media_controller = new Android.Widget.MediaController(this);
             videoView.SetVideoURI(uri);
+            //videoView.SetOnPreparedListener(new VideoLoop());
             media_controller.SetMediaPlayer(videoView);
+
             videoView.SetMediaController(media_controller);
             videoView.RequestFocus();
-            videoView.Visibility = ViewStates.Visible;
 
+            var play_button = FindViewById<Button>(Resource.Id.play_button);
+            var pause_button = FindViewById<Button>(Resource.Id.pause_button);
+            var mute_button = FindViewById<Button>(Resource.Id.mute_button);
+            var volume_seekBar = FindViewById<SeekBar>(Resource.Id.seek_bar);
+
+            MediaPlayer player = MediaPlayer.Create(this, Resource.Raw.MainTheme);
+
+            play_button.Click += (o, e) =>
+            {
+                player.Start();
+            };
+            pause_button.Click += (o, e) =>
+            {
+                player.Pause();
+            };
+            mute_button.Click += (o, e) =>
+            {
+                player.SetVolume(0f,0f);
+            };
+            volume_seekBar.ProgressChanged += (o, e) =>
+            {
+                player.SetVolume((float)volume_seekBar.Progress, (float)volume_seekBar.Progress);
+            };
+
+        }
+        public void update_status()
+        {
+            var health_value = FindViewById<TextView>(Resource.Id.status_health_value);
+            health_value.Text = (special[2].Data[0]+ perks[2].Data[1]).ToString();
+            var carryweight_value = FindViewById<TextView>(Resource.Id.status_carryweight_value);
+            carryweight_value.Text = special[0].Data[0].ToString();
         }
 
         public override void OnBackPressed()
@@ -240,7 +318,7 @@ namespace _76PlayerCreator
             return true;
         }
 
-        public override bool OnOptionsItemSelected(IMenuItem item)
+        /*public override bool OnOptionsItemSelected(IMenuItem item)
         {
             int id = item.ItemId;
             if (id == Resource.Id.action_settings)
@@ -249,9 +327,13 @@ namespace _76PlayerCreator
             }
 
             return base.OnOptionsItemSelected(item);
+        }*/
+
+        public class VideoLoop : Java.Lang.Object, Android.Media.MediaPlayer.IOnPreparedListener
+        {
+            public void OnPrepared(MediaPlayer mp)
+            { mp.SetVolume(0f, 0f); }
         }
-
-
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
@@ -260,24 +342,39 @@ namespace _76PlayerCreator
             RelativeLayout layout_perks = FindViewById<RelativeLayout>(Resource.Id.content_perks);
             RelativeLayout layout_navigation = FindViewById<RelativeLayout>(Resource.Id.content_main);
             RelativeLayout layout_tutorial = FindViewById<RelativeLayout>(Resource.Id.content_tutorial);
-            
+            RelativeLayout layout_settings = FindViewById<RelativeLayout>(Resource.Id.content_settings);
+
             int id = item.ItemId;
-            if (id == Resource.Id.nav_camera)
+            if (id == Resource.Id.content_main)
             {
                 layout_status.Visibility = ViewStates.Visible;
                 layout_navigation.Visibility = ViewStates.Visible;
                 layout_tutorial.Visibility = ViewStates.Gone;
-
-                videoView.Start();
+                layout_settings.Visibility = ViewStates.Gone;
+                videoView.Pause();
+                update_status();
             }
-            else if (id == Resource.Id.nav_gallery)
+            else if (id == Resource.Id.content_tutorial)
             {
                 layout_perks.Visibility = ViewStates.Gone;
                 layout_special.Visibility = ViewStates.Gone;
                 layout_status.Visibility = ViewStates.Gone;
                 layout_navigation.Visibility = ViewStates.Gone;
                 layout_tutorial.Visibility = ViewStates.Visible;
+                layout_settings.Visibility = ViewStates.Gone;
+                videoView.Start();
             }
+            else if (id == Resource.Id.content_settings)
+            {
+                layout_perks.Visibility = ViewStates.Gone;
+                layout_special.Visibility = ViewStates.Gone;
+                layout_status.Visibility = ViewStates.Gone;
+                layout_navigation.Visibility = ViewStates.Gone;
+                layout_tutorial.Visibility = ViewStates.Gone;
+                layout_settings.Visibility = ViewStates.Visible;
+                videoView.Pause();
+            }
+
             else if (id == Resource.Id.nav_share)
             {
 
@@ -307,7 +404,6 @@ namespace _76PlayerCreator
                     layout_special.Visibility = ViewStates.Gone;
                     layout_status.Visibility = ViewStates.Gone;
                     return true;
-
             }
             return false;
         }

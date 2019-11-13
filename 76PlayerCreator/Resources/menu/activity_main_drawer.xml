@@ -5,13 +5,14 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/content_main"
             android:title="Status" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/content_tutorial"
             android:title="Tutorial" />
+        <item
+            android:id="@+id/content_settings"
+            android:title="Settings" />
     </group>
 
     <item android:title="Template">

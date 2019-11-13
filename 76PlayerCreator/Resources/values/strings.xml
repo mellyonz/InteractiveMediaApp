@@ -1,9 +1,36 @@
 <resources>
-    <string name="app_name">_76PlayerCreator</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_home">Status</string>
-    <string name="title_dashboard">Special</string>
-    <string name="title_notifications">Perks</string>
+    <string name="app_name">
+      <font color='#0C833D'>76PlayerCreator</font>
+    </string>
+    <string name="navigation_drawer_open">
+      <font color='#0C833D'>Open navigation drawer</font>
+    </string>
+    <string name="navigation_drawer_close">
+      <font color='#0C833D'>Close navigation drawer</font>
+    </string>
+    <string name="action_settings">
+      <font color='#0C833D'>Settings</font>
+    </string>
+    <string name="status_title">
+      <font color='#0C833D'>Status</font>
+    </string>
+    <string name="status_health">
+      <font color='#0C833D'>Health</font>
+    </string>
+    <string name="status_carryweight">
+      <font color='#0C833D'>Carry Weight</font>
+    </string>
+    <string name="status_health_value">
+      <font color='#0C833D'>None</font>
+    </string>
+    <string name="status_carryweight_value">
+      <font color='#0C833D'>None</font>
+    </string>
+    <string name="title_dashboard">
+      <font color='#0C833D'>Special</font>
+    </string>
+    <string name="title_notifications">
+      <font color='#0C833D'>Perks</font>
+    </string>
+    <color name="black">#000000</color>
 </resources>

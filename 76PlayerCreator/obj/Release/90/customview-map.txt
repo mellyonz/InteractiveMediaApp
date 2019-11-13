@@ -1,4 +1,0 @@
-cache-path;C:\Users\sidde\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Release\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-cache-path;C:\Users\sidde\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Release\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\sidde\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Release\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-paths;C:\Users\sidde\Dropbox\76PlayerCreator\InteractiveMediaApp\76PlayerCreator\obj\Release\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
