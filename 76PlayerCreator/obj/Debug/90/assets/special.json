@@ -1,0 +1,81 @@
+{
+    "special":[
+        {
+            "mainColor": "#779b7a",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 0,
+            "name": "Strength",
+            "description": "Strength is a measure of your raw physical power. It affects how much you can carry, and the damage of all melee attacks.",
+            "image": ""
+
+        },
+        {
+            "mainColor": "#8e8e6d",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 1,
+            "name": "Perception",
+            "description": "Perception affects your awareness of nearby enemies, your ability to detect stealthy movement, and your weapon accuracy in V.A.T.S.",
+            "image": ""
+
+        },
+        {
+            "mainColor": "#4aa3b3",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 2,
+            "name": "Endurance",
+            "description": "Endurance is a measure of your overall physical fitness. It affects your total Health, the Action Point drain from sprinting, and your resistance to disease.",
+            "image": ""
+
+        },
+        {
+            "mainColor": "#cfa36d",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 3,
+            "name": "Charisma",
+            "description": "Charisma is your ability to lead and help others. It allows you to share higher point Perk Cards and also affects your rewards from Group Missions and prices when you barter.",
+            "image": ""
+
+        },
+        {
+            "mainColor": "#9c9982",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 4,
+            "name": "Intelligence",
+            "description": "Intelligence is a measure of your overall mental acuity, and affects your ability to hack terminals, the condition and durability of items that you craft, and the return you get from scrapping.",
+            "image": ""
+
+        },
+        {
+            "mainColor": "#c89777",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 5,
+            "name": "Agility",
+            "description": "Agility is a measure of your overall finesse and reflexes. It affects the number of Action Points in V.A.T.S. and your ability to sneak.",
+            "image": ""
+
+        },
+        {
+            "mainColor": "#bcc1d6",
+            "maxPoints": 15,
+            "assignedPoints": 1,
+            "totPointsUsedByCards": 0,
+            "branch": 6,
+            "name": "Luck",
+            "description": "Luck is a measure of your general good fortune, and affects the recharge rate of Critical Hits as well as the condition and durability of items that you loot.",
+            "image": ""
+
+        }
+    ]
+}

@@ -6,13 +6,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/content_main"
-            android:title="Status" />
+            android:title="@string/content_main" />
         <item
             android:id="@+id/content_tutorial"
-            android:title="Tutorial" />
+            android:title="@string/content_tutorial" />
         <item
             android:id="@+id/content_settings"
-            android:title="Settings" />
+            android:title="@string/content_settings" />
+      <item
+            android:id="@+id/content_splash"
+            android:title="@string/content_splash" />
     </group>
 
     <item android:title="Template">
@@ -20,11 +23,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Load" />
+                android:title="@string/content_load" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Save" />
+                android:title="@string/content_save" />
         </menu>
     </item>
 

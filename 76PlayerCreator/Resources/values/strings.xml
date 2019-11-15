@@ -32,5 +32,25 @@
     <string name="title_notifications">
       <font color='#0C833D'>Perks</font>
     </string>
-    <color name="black">#000000</color>
+    <string name="showPopup">
+      <font color='#0C833D'>Close</font>
+    </string>
+    <string name="content_main">
+      <font color='#0C833D'>Status</font>
+    </string>
+    <string name="content_tutorial">
+      <font color='#0C833D'>Tutorial</font>
+    </string>
+    <string name="content_load">
+      <font color='#0C833D'>Load</font>
+    </string>
+    <string name="content_save">
+      <font color='#0C833D'>Save</font>
+    </string>
+    <string name="content_splash">
+      <font color='#0C833D'>Splash</font>
+    </string>
+    <string name="content_settings">
+      <font color='#0C833D'>Settings</font>
+    </string>
 </resources>
